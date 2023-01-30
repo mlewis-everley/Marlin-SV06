@@ -41,25 +41,25 @@
 //
 // Servos
 //
-#define SERVO0_PIN                          PA1   // SERVOS
+#define SERVO0_PIN                          PB0   // SERVOS
 
 //
 // Limit Switches
 //
-#define X_STOP_PIN                          PC0   // X-STOP
-#define Y_STOP_PIN                          PC1   // Y-STOP
-#define Z_STOP_PIN                          PC2   // Z-STOP
+#define X_STOP_PIN                          PA5   // X-STOP
+#define Y_STOP_PIN                          PA6   // Y-STOP
+#define Z_STOP_PIN                          PA7   // Z-STOP
 
 //
 // Z Probe must be this pin
 //
-#define Z_MIN_PROBE_PIN                     PC14  // PROBE
+#define Z_MIN_PROBE_PIN                     PB1  // PROBE
 
 //
 // Filament Runout Sensor
 //
 #ifndef FIL_RUNOUT_PIN
-  #define FIL_RUNOUT_PIN                    PC15  // E0-STOP
+  #define FIL_RUNOUT_PIN                    PA4  // E0-STOP
 #endif
 
 //
@@ -72,36 +72,43 @@
 //
 // Steppers
 //
-#define X_ENABLE_PIN                        PB14
-#define X_STEP_PIN                          PB13
-#define X_DIR_PIN                           PB12
+#define X_ENABLE_PIN                        PC3
+#define X_STEP_PIN                          PC2
+#define X_DIR_PIN                           PB9
 
-#define Y_ENABLE_PIN                        PB11
-#define Y_STEP_PIN                          PB10
-#define Y_DIR_PIN                           PB2
+#define Y_ENABLE_PIN                        PC3
+#define Y_STEP_PIN                          PB8
+#define Y_DIR_PIN                           PB7
 
-#define Z_ENABLE_PIN                        PB1
-#define Z_STEP_PIN                          PB0
-#define Z_DIR_PIN                           PC5
+#define Z_ENABLE_PIN                        PC3
+#define Z_STEP_PIN                          PB6
+#define Z_DIR_PIN                           PB5
 
-#define E0_ENABLE_PIN                       PD2
-#define E0_STEP_PIN                         PB3
-#define E0_DIR_PIN                          PB4
+#define E0_ENABLE_PIN                       PC3
+#define E0_STEP_PIN                         PB4
+#define E0_DIR_PIN                          PB3
 
 //
 // Temperature Sensors
 //
-#define TEMP_0_PIN                          PA0   // Analog Input "TH0"
-#define TEMP_BED_PIN                        PC3   // Analog Input "TB0"
+#define TEMP_0_PIN                          PC5   // Analog Input "TH0"
+#define TEMP_BED_PIN                        PC4   // Analog Input "TB0"
 
 //
 // Heaters / Fans
 //
-#define HEATER_0_PIN                        PC8   // "HE"
-#define HEATER_BED_PIN                      PC9   // "HB"
+#define HEATER_0_PIN                        PA1   // "HE"
+#define HEATER_BED_PIN                      PA2   // "HB"
 
+<<<<<<< ours
 #ifndef FAN_PIN
   #define FAN_PIN                           PA8   // "FAN0"
+=======
+#ifdef SKR_MINI_E3_V2
+  #define FAN_PIN                           PC6
+#else
+  #define FAN_PIN                           PA0   // "FAN0"
+>>>>>>> theirs
 #endif
 
 //
@@ -162,6 +169,7 @@
 
   #if ENABLED(CR10_STOCKDISPLAY)
 
+<<<<<<< ours
     #define BEEPER_PIN               EXP1_01_PIN
     #define BTN_ENC                  EXP1_02_PIN
 
@@ -171,6 +179,16 @@
     #define LCD_PINS_RS              EXP1_07_PIN
     #define LCD_PINS_ENABLE          EXP1_08_PIN
     #define LCD_PINS_D4              EXP1_06_PIN
+=======
+    #define BEEPER_PIN                      PC6
+    #define LCD_PINS_RS                     PB12
+    #define LCD_PINS_ENABLE                 PB15
+    #define LCD_PINS_D4                     PB13
+
+    #define BTN_ENC                         PB2
+    #define BTN_EN1                         PB10
+    #define BTN_EN2                         PB14
+>>>>>>> theirs
 
   #elif ENABLED(ZONESTAR_LCD)                     // ANET A8 LCD Controller - Must convert to 3.3V - CONNECTING TO 5V WILL DAMAGE THE BOARD!
 
@@ -364,7 +382,7 @@
 #endif
 
 #if SD_CONNECTION_IS(ONBOARD)
-  #define SD_DETECT_PIN                     PC4
+  #define SD_DETECT_PIN                     PC7
 #elif SD_CONNECTION_IS(LCD) && (BOTH(TOUCH_UI_FTDI_EVE, LCD_FYSETC_TFT81050) || IS_TFTGLCD_PANEL)
   #define SD_DETECT_PIN              EXP1_01_PIN
   #define SD_SS_PIN                  EXP1_05_PIN

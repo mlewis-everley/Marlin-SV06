@@ -93,7 +93,7 @@ extern "C" {
 #endif /* HSE_VALUE */
 
 #ifndef HSE_STARTUP_TIMEOUT
-#define HSE_STARTUP_TIMEOUT    100U      /*!< Time out for HSE start up, in ms */
+#define HSE_STARTUP_TIMEOUT    999U      /*!< Time out for HSE start up, in ms */
 #endif /* HSE_STARTUP_TIMEOUT */
 
 /**

@@ -38,7 +38,7 @@
   #define DEFAULT_MACHINE_NAME "Ender 3 V2"
 #endif
 
-#define BOARD_NO_NATIVE_USB
+//#define BOARD_NO_NATIVE_USB
 
 //
 // Release PB4 (Y_ENABLE_PIN) from JTAG NRST role
@@ -133,6 +133,30 @@
 #endif
 #define E0_ENABLE_PIN               X_ENABLE_PIN
 
+#if HAS_TMC_UART
+  /**
+   * TMC2208/TMC2209 stepper drivers
+   *
+   * Hardware serial communication ports.
+   * If undefined software serial is used according to the pins below
+   */
+  
+
+  #define X_SERIAL_TX_PIN                   PC1
+  #define X_SERIAL_RX_PIN                   PC1
+
+  #define Y_SERIAL_TX_PIN                   PC0
+  #define Y_SERIAL_RX_PIN                   PC0
+
+  #define Z_SERIAL_TX_PIN                   PA15
+  #define Z_SERIAL_RX_PIN                   PA15
+
+  #define E0_SERIAL_TX_PIN                  PC14
+  #define E0_SERIAL_RX_PIN                  PC14
+
+  // Reduce baud rate to improve software serial reliability
+  #define TMC_BAUD_RATE                    19200
+#endif // HAS_TMC_UART
 //
 // Temperature Sensors
 //

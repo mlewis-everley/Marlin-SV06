@@ -66,8 +66,18 @@
  * (Other behaviors are given by the firmware version and capabilities report.)
  */
 #ifndef PROTOCOL_VERSION
-  #define PROTOCOL_VERSION "1.0"
+  #define PROTOCOL_VERSION "1.9.2_A"
 #endif
+
+
+
+/**
+ * Firmware Version information
+ */
+#ifndef FIRMWARE_VERSION
+  #define FIRMWARE_VERSION "V1.9.2_A"
+#endif
+
 
 /**
  * Define a generic printer name to be output to the LCD after booting Marlin.
@@ -97,7 +107,7 @@
    * documentation about a specific Marlin release. Displayed in the Info Menu.
    */
 #ifndef WEBSITE_URL
-  #define WEBSITE_URL "marlinfw.org"
+  #define WEBSITE_URL "sovol3d.com"
 #endif
 
 /**
