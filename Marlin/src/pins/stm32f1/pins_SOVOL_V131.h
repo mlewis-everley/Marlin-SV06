@@ -124,7 +124,7 @@
    * Hardware serial communication ports.
    * If undefined software serial is used according to the pins below
    */
-  
+
 
   #define X_SERIAL_TX_PIN                   PC1
   #define X_SERIAL_RX_PIN                   PC1
@@ -189,8 +189,8 @@
     #define BTN_EN2                         PB14
 
     #ifndef HAS_PIN_27_BOARD
-      #define BEEPER_PIN                    PC6
+      #define BEEPER_PIN                    -1
     #endif
   #endif
-  
+
 #endif
