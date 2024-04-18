@@ -2743,8 +2743,8 @@
   #endif
 
   #if AXIS_IS_TMC_CONFIG(Y)
-    #define Y_CURRENT       900
-    #define Y_CURRENT_HOME  Y_CURRENT
+    #define Y_CURRENT       1100
+    #define Y_CURRENT_HOME  900
     #define Y_MICROSTEPS     64
     #define Y_RSENSE          0.15
     #define Y_CHAIN_POS      -1
@@ -2763,7 +2763,7 @@
   #endif
 
   #if AXIS_IS_TMC_CONFIG(Z)
-    #define Z_CURRENT       1000
+    #define Z_CURRENT       1100
     #define Z_CURRENT_HOME  Z_CURRENT
     #define Z_MICROSTEPS     16
     #define Z_RSENSE          0.15
@@ -2863,7 +2863,7 @@
   #endif
 
   #if AXIS_IS_TMC_CONFIG(E0)
-    #define E0_CURRENT      550
+    #define E0_CURRENT      600
     #define E0_MICROSTEPS    16
     #define E0_RSENSE         0.15
     #define E0_CHAIN_POS     -1
@@ -3115,7 +3115,7 @@
   #define X2_HYBRID_THRESHOLD    150
   #define Y_HYBRID_THRESHOLD     180
   #define Y2_HYBRID_THRESHOLD    150
-  #define Z_HYBRID_THRESHOLD      40
+  #define Z_HYBRID_THRESHOLD      20
   #define Z2_HYBRID_THRESHOLD      3
   #define Z3_HYBRID_THRESHOLD      3
   #define Z4_HYBRID_THRESHOLD      3
